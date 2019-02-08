@@ -13,7 +13,7 @@ Given(/^(?:|I )am on (?:|the )homepage$/, () => {
     cy.visit('https://dealer.sata.com.testing.imi.de');
 });
 
-Given(/^(?:|I )am on "(?<page>[^"]+)"$/, page => {                         //so richtig check ich den regEx nicht
+Given(/^(?:|I )am on "(?<page>[^"]+)"$/, page => {
     cy.visit(page);
 });
 
@@ -27,7 +27,7 @@ When(/^(?:|I ) go to (?:|the )homepage$/, (url) => {
     cy.visit('https://dealer.sata.com.testing.imi.de' + url)
 });
 
-When(/^(?:|I )am on "(?<page>[^"]+)"$/, page => {                             //so richtig check ich den regEx nicht,// offenbar gehts auch nicht ohne.
+When(/^(?:|I )am on "(?<page>[^"]+)"$/, page => {
     cy.visit(page);
 });
 
@@ -39,11 +39,11 @@ When(/^(?:|I )move backward one page$/, () => {
     cy.go('forward');
 });
 
-When(/^(?:|I )press "(?<button>(?:[^"]|\\")*)"$/, button => {                   //Problem mit RegEx
+When(/^(?:|I )press "(?<button>(?:[^"]|\\")*)"$/, button => {
     cy.get('#' + button).click();
 });
 
-When(/^(?:|I )follow "(?<link>(?:[^"]|\\")*)"$/, () => {                          //Problem mit RegEx
+When(/^(?:|I )follow "(?<link>(?:[^"]|\\")*)"$/, () => {
     //tdb
 });
 
